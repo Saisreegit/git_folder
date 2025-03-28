@@ -1,0 +1,43 @@
+nohup: ignoring input
+[2025-03-27 10:39:52 +0000] [171178] [INFO] Starting gunicorn 23.0.0
+[2025-03-27 10:39:52 +0000] [171178] [INFO] Listening at: http://0.0.0.0:5001 (171178)
+[2025-03-27 10:39:52 +0000] [171178] [INFO] Using worker: sync
+[2025-03-27 10:39:52 +0000] [171179] [INFO] Booting worker with pid: 171179
+[2025-03-27 10:39:52 +0000] [171180] [INFO] Booting worker with pid: 171180
+[2025-03-27 10:39:52 +0000] [171181] [INFO] Booting worker with pid: 171181
+[2025-03-27 10:39:52 +0000] [171182] [INFO] Booting worker with pid: 171182
+[2025-03-27 10:41:46,427] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/git_folder/app.py", line 7, in home
+    return render_template('index.html')
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+[2025-03-27 10:48:31 +0000] [171182] [INFO] Parent changed, shutting down: <Worker 171182>
+[2025-03-27 10:48:31 +0000] [171182] [INFO] Worker exiting (pid: 171182)
+[2025-03-27 10:48:38 +0000] [171179] [INFO] Parent changed, shutting down: <Worker 171179>
+[2025-03-27 10:48:38 +0000] [171179] [INFO] Worker exiting (pid: 171179)
+[2025-03-27 10:48:38 +0000] [171180] [INFO] Parent changed, shutting down: <Worker 171180>
+[2025-03-27 10:48:38 +0000] [171180] [INFO] Worker exiting (pid: 171180)
+[2025-03-27 10:48:38 +0000] [171181] [INFO] Parent changed, shutting down: <Worker 171181>
+[2025-03-27 10:48:38 +0000] [171181] [INFO] Worker exiting (pid: 171181)
