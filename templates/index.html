@@ -3,31 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Saisree World</title>
+    <title>Flask Web App</title>
     <style>
         body {
-            # background-color: blue;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        nav {
+            background-color: #343a40;
+            padding: 15px;
             text-align: center;
-            font-family: Arial, sans-serif;
-            padding: 50px;
         }
-        h1 {
-            color: red;
-            font-size: 36px;
-        }
-        p {
+        nav a {
             color: white;
+            text-decoration: none;
+            margin: 0 15px;
             font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: #007BFF;
+            color: white;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #007BFF;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Saisree Webpage</h1>
-    <p>Hello! I'm Saisree. I love exploring new ideas and creating amazing projects.  
-       In this space, you'll find my thoughts, interests, and passions Hello! I'm Saisree. I love exploring new ideas and creating amazing projects.  
-       In this space, you'll find my thoughts, interests, and passions Hello! I'm Saisree. I love exploring new ideas and creating amazing projects.  
-       In this space, you'll find my thoughts, interests, and passions Hello! I'm Saisree. I love exploring new ideas and creating amazing projects.  
-       In this space, you'll find my thoughts, interests, and passions Hello! I'm Saisree. I love exploring new ideas and creating amazing projects.  
-       In this space, you'll find my thoughts, interests, and passions.</p>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to My Flask Web App</h1>
+        <p>A simple, modern web page built using Flask and HTML.</p>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="container">
+        <h2>About This App</h2>
+        <p>This Flask app provides dynamic web functionalities with an easy-to-use interface.</p>
+    </div>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 Flask Web App | All Rights Reserved
+    </footer>
+
 </body>
 </html>
