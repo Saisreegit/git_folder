@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marksheet - My Flask Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/service">Service</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1>Student Marksheet</h1>
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Marks Obtained</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td>Math</td>
+            <td>90</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td>85</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>English</td>
+            <td>88</td>
+            <td>B+</td>
+        </tr>
+    </table>
+</body>
+</html>
