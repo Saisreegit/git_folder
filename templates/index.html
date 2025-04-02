@@ -3,120 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Web App</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        nav {
-            background-color: #343a40;
-            padding: 15px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            text-align: center;
-            padding: 50px;
-            background: #007BFF;
-            color: white;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        h1, h2 {
-            color: #007BFF;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
-            color: white;
-            background: #007BFF;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-        .btn:hover {
-            background: #0056b3;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            padding: 10px 20px;
-            background: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background: #0056b3;
-        }
-        footer {
-            text-align: center;
-            background-color: #343a40;
-            color: white;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Home - My Flask Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/service">Service</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </nav>
-
-    <div class="hero">
-        <h1>Welcome to My Flask Web App</h1>
-        <p>A simple, modern web page built using Flask and HTML.</p>
-        <a href="#" class="btn">Get Started</a>
-    </div>
-
-    <div class="container">
-        <h2>About This App</h2>
-        <p>This Flask app provides dynamic web functionalities with an easy-to-use interface.</p>
-    </div>
-
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="4" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-
-    <footer>
-        &copy; 2025 Flask Web App | All Rights Reserved
-    </footer>
-
+    <section class="hero">
+        <div class="block">
+            <a href="/student_details"><button class="arrow-btn">→</button></a>
+            <h2>Student Details</h2>
+        </div>
+        <div class="block">
+            <a href="/student_marks"><button class="arrow-btn">→</button></a>
+            <h2>Student Marksheet</h2>
+        </div>
+        <div class="block">
+            <a href="/student_skills"><button class="arrow-btn">→</button></a>
+            <h2>Student Skills</h2>
+        </div>
+        <div class="block">
+            <a href="/student_poy"><button class="arrow-btn">→</button></a>
+            <h2>Student Passed-out Year</h2>
+        </div>
+    </section>
 </body>
 </html>
